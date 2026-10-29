@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЛИСТ — чай, кофе и журнал</title>
+<meta name="description" content="Чайная и кофейная лавка: малые партии чая, свежий обжар кофе и журнал о том, как пить внимательнее.">
+<meta name="theme-color" content="#F2F1E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231E3A2B'/%3E%3Cpath d='M8 24c0-9 6-15 16-16-1 10-7 16-16 16z' fill='none' stroke='%23F2F1E8' stroke-width='1.6'/%3E%3Cpath d='M9 23c4-6 8-9 12-11' stroke='%23F2F1E8' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <span>Свежая обжарка по вторникам · чай малыми партиями</span>
+    <span class="topbar-note">Доставка по России от 2 дней</span>
+    <a href="tel:+74951207790">+7 495 120-77-90</a>
+  </div>
+</div>
+
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="ЛИСТ — на главную">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor"/>
+        <path d="M12 28c0-9 6-15 16-16-1 10-7 16-16 16z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M12.5 27.5c4-6 8-9 12-11" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <span class="logo-text">Лист<span class="logo-sub">чай · кофе · журнал</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#shelf">Полка</a>
+      <a href="#journal">Журнал</a>
+      <a href="#about">О лавке</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+74951207790">+7 495 120-77-90</a>
+      <button class="cart-btn" id="cartBtn" aria-label="Открыть корзину" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8h11l1 12h-13z" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <div class="wrap">
+      <a href="#shelf">Полка</a>
+      <a href="#journal">Журнал</a>
+      <a href="#about">О лавке</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#contacts">Контакты</a>
+      <a class="mobile-phone" href="tel:+74951207790">+7 495 120-77-90</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Лавка на Покровке · с 2018 года</p>
+        <h1>Хороший чай<br>не любит<br><em>спешки</em></h1>
+        <p class="lead">38 сортов чая с небольших плантаций, кофе свежей обжарки и журнал о том, как всё это пить. Без дегустационного снобизма и «нот спелой вишни» на каждой пачке.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#shelf">Смотреть полку
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+          </a>
+          <a class="link-line" href="#journal">Читать журнал</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>38</dt><dd>сортов чая</dd></div>
+          <div><dt>4</dt><dd>обжарки в месяц</dd></div>
+          <div><dt>№ 04</dt><dd>свежий выпуск журнала</dd></div>
+        </dl>
+      </div>
+
+      <a class="hero-cover grain" href="#journal" data-article="water" aria-label="Читать выпуск журнала: Вода важнее чайника">
+        <div class="cover-top">
+          <span>Журнал · выпуск 04</span>
+          <span>Апрель 2026</span>
+        </div>
+        <svg class="cover-art" viewBox="0 0 420 520" aria-hidden="true">
+          <circle cx="210" cy="252" r="162" fill="none" stroke="#F2F1E8" stroke-opacity=".18"/>
+          <circle cx="210" cy="252" r="196" fill="none" stroke="#F2F1E8" stroke-opacity=".1" stroke-dasharray="2 8"/>
+
+          <path d="M126 246c0-50 38-86 84-86s84 36 84 86-38 96-84 96-84-46-84-96z" fill="#F2F1E8" fill-opacity=".04" stroke="#F2F1E8" stroke-width="2"/>
+          <path d="M294 234c20-12 35-4 39 10 3 13-5 24-18 28" fill="none" stroke="#F2F1E8" stroke-width="2" stroke-linecap="round"/>
+          <path d="M126 224c-27 9-28 52-1 62" fill="none" stroke="#F2F1E8" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="210" cy="160" rx="42" ry="9" fill="none" stroke="#F2F1E8" stroke-width="2"/>
+          <circle cx="210" cy="146" r="6" fill="#B2792F"/>
+          <path d="M143 250c10 28 36 46 67 46" fill="none" stroke="#F2F1E8" stroke-opacity=".25" stroke-width="1.4"/>
+
+          <path d="M333 270c8 32 2 56-12 76" fill="none" stroke="#F2F1E8" stroke-width="1.4" stroke-dasharray="3 5" opacity=".7"/>
+
+          <path d="M306 360h76l-9 50a22 22 0 0 1-22 18h-14a22 22 0 0 1-22-18z" fill="#F2F1E8" fill-opacity=".04" stroke="#F2F1E8" stroke-width="2"/>
+          <path d="M382 372c22-4 32 10 26 26-4 12-16 16-28 12" fill="none" stroke="#F2F1E8" stroke-width="2"/>
+          <ellipse cx="344" cy="360" rx="38" ry="8" fill="none" stroke="#F2F1E8" stroke-width="2"/>
+          <path d="M330 334c-8-12 6-18 0-30M356 330c7-11-6-17 0-28" fill="none" stroke="#F2F1E8" stroke-opacity=".35" stroke-dasharray="4 6"/>
+
+          <path d="M96 470c14-34 34-58 62-72" fill="none" stroke="#F2F1E8" stroke-opacity=".55" stroke-width="1.6"/>
+          <path d="M132 412c-4-20 6-36 26-44 4 20-6 36-26 44z" fill="#B2792F" opacity=".85"/>
+          <path d="M148 392c-14-10-20-26-14-44 16 8 22 24 14 44z" fill="#B2792F" opacity=".6"/>
+          <path d="M110 448c-16-4-26-16-28-32 16 2 26 12 28 32z" fill="#F2F1E8" opacity=".35"/>
+        </svg>
+        <div class="cover-bottom">
+          <h2>Вода важнее<br>чайника</h2>
+          <span class="cover-link">Читать выпуск
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <span>Малые партии</span>
+      <span>Свежая обжарка</span>
+      <span>Дегустации по субботам</span>
+      <span>Доставка по России</span>
+      <span>Журнал о чае и кофе</span>
+    </div>
+  </div>
+
+  <section class="section" id="shelf">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Полка</p>
+          <h2>Что взять<br>на этой неделе</h2>
+        </div>
+        <p class="section-note">Небольшой выбор — чтобы не выбирать час. Чай приезжает раз в месяц, кофе обжариваем каждую неделю.</p>
+      </div>
+
+      <div class="filters reveal" role="group" aria-label="Фильтр полки">
+        <button class="chip is-active" data-filter="all">Всё<span>4</span></button>
+        <button class="chip" data-filter="tea">Чай<span>2</span></button>
+        <button class="chip" data-filter="coffee">Кофе<span>2</span></button>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid">
+
+        <article class="product reveal" data-id="tgy" data-name="Те Гуань Инь" data-price="890" data-tint="#E1E3D5" data-cat="tea">
+          <div class="media" style="--tint:#E1E3D5">
+            <span class="badge">новинка</span>
+            <svg viewBox="0 0 300 340" aria-hidden="true">
+              <ellipse cx="150" cy="302" rx="82" ry="10" fill="#1B201B" opacity=".07"/>
+              <path d="M92 92h116v184a14 14 0 0 1-14 14h-88a14 14 0 0 1-14-14z" fill="#D6C09B"/>
+              <path d="M84 74h132l-8 24H92z" fill="#C4AC84"/>
+              <path d="M92 98h116" stroke="#1B201B" stroke-opacity=".12"/>
+              <rect x="106" y="124" width="88" height="102" fill="#2A4A37"/>
+              <rect x="112" y="130" width="76" height="90" fill="none" stroke="#F2F1E8" stroke-opacity=".35"/>
+              <path d="M138 178c0-13 9-21 23-23-1 15-10 23-23 23z" fill="none" stroke="#F2F1E8" stroke-width="1.6"/>
+              <path d="M139 177c6-8 12-13 17-16" fill="none" stroke="#F2F1E8" stroke-width="1.3"/>
+              <path d="M124 206h52M124 214h38" stroke="#F2F1E8" stroke-opacity=".45"/>
+              <circle cx="150" cy="254" r="8" fill="none" stroke="#B2792F"/>
+              <path d="M146 254h8" stroke="#B2792F"/>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="product-top"><h3>Те Гуань Инь</h3><span class="price">890 ₽</span></div>
+            <p class="meta">Улун · Фуцзянь · 50 г</p>
+            <button class="add" data-add data-id="tgy">
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.3"/></svg>
+              В корзину
+            </button>
+          </div>
+        </article>
+
+        <article class="product reveal" data-id="hongcha" data-name="Красный Хун Ча" data-price="760" data-tint="#E6DCCC" data-cat="tea">
+          <div class="media" style="--tint:#E6DCCC">
+            <svg viewBox="0 0 300 340" aria-hidden="true">
+              <ellipse cx="150" cy="302" rx="82" ry="10" fill="#1B201B" opacity=".07"/>
+              <path d="M92 92h116v184a14 14 0 0 1-14 14h-88a14 14 0 0 1-14-14z" fill="#D2B892"/>
+              <path d="M84 74h132l-8 24H92z" fill="#BFA478"/>
+              <path d="M92 98h116" stroke="#1B201B" stroke-opacity=".12"/>
+              <rect x="106" y="124" width="88" height="102" fill="#8A4A32"/>
+              <rect x="112" y="130" width="76" height="90" fill="none" stroke="#F2F1E8" stroke-opacity=".35"/>
+              <circle cx="150" cy="166" r="13" fill="none" stroke="#B2792F" stroke-width="1.8"/>
+              <path d="M142 166c5-7 11-7 16 0" fill="none" stroke="#B2792F" stroke-width="1.4"/>
+              <path d="M124 196h52M124 204h38M124 212h46" stroke="#F2F1E8" stroke-opacity=".45"/>
+              <circle cx="150" cy="254" r="8" fill="none" stroke="#B2792F"/>
+              <path d="M146 254h8" stroke="#B2792F"/>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="product-top"><h3>Красный Хун Ча</h3><span class="price">760 ₽</span></div>
+            <p class="meta">Красный чай · Юньнань · 50 г</p>
+            <button class="add" data-add data-id="hongcha">
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.3"/></svg>
+              В корзину
+            </button>
+          </div>
+        </article>
+
+        <article class="product reveal" data-id="guji" data-name="Эфиопия Гуджи" data-price="1150" data-tint="#E2D5C9" data-cat="coffee">
+          <div class="media" style="--tint:#E2D5C9">
+            <span class="badge">свежая обжарка</span>
+            <svg viewBox="0 0 300 340" aria-hidden="true">
+              <ellipse cx="150" cy="302" rx="84" ry="10" fill="#1B201B" opacity=".07"/>
+              <path d="M88 88h124v190a12 12 0 0 1-12 12H100a12 12 0 0 1-12-12z" fill="#2C2822"/>
+              <path d="M80 70h140l-8 24H88z" fill="#3A342B"/>
+              <circle cx="150" cy="118" r="9" fill="#4B443A"/>
+              <circle cx="150" cy="118" r="4" fill="#2C2822"/>
+              <rect x="104" y="140" width="92" height="96" fill="#E7DFCE"/>
+              <rect x="112" y="148" width="76" height="80" fill="none" stroke="#2C2822" stroke-opacity=".25"/>
+              <circle cx="150" cy="174" r="14" fill="none" stroke="#B2792F" stroke-width="1.8"/>
+              <path d="M141 174c5-8 13-8 18 0" fill="none" stroke="#B2792F" stroke-width="1.4"/>
+              <path d="M122 204h56M122 212h40" stroke="#2C2822" stroke-opacity=".35"/>
+              <circle cx="150" cy="264" r="7" fill="#B2792F" opacity=".85"/>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="product-top"><h3>Эфиопия Гуджи</h3><span class="price">1 150 ₽</span></div>
+            <p class="meta">Кофе · светлая обжарка · 250 г</p>
+            <button class="add" data-add data-id="guji">
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.3"/></svg>
+              В корзину
+            </button>
+          </div>
+        </article>
+
+        <article class="product reveal" data-id="huila" data-name="Колумбия Уила" data-price="1020" data-tint="#DED9CC" data-cat="coffee">
+          <div class="media" style="--tint:#DED9CC">
+            <svg viewBox="0 0 300 340" aria-hidden="true">
+              <ellipse cx="150" cy="302" rx="84" ry="10" fill="#1B201B" opacity=".07"/>
+              <path d="M88 88h124v190a12 12 0 0 1-12 12H100a12 12 0 0 1-12-12z" fill="#33302A"/>
+              <path d="M80 70h140l-8 24H88z" fill="#423D35"/>
+              <circle cx="150" cy="118" r="9" fill="#544C42"/>
+              <circle cx="150" cy="118" r="4" fill="#33302A"/>
+              <rect x="104" y="140" width="92" height="96" fill="#DDD5C2"/>
+              <rect x="112" y="148" width="76" height="80" fill="none" stroke="#33302A" stroke-opacity=".25"/>
+              <path d="M136 174c0-10 7-16 14-16s14 6 14 16-7 16-14 16-14-6-14-16z" fill="none" stroke="#2A4A37" stroke-width="1.6"/>
+              <path d="M150 160v28M136 174h28" stroke="#2A4A37" stroke-width="1.2" opacity=".7"/>
+              <path d="M122 204h56M122 212h40" stroke="#33302A" stroke-opacity=".35"/>
+              <circle cx="150" cy="264" r="7" fill="#2A4A37" opacity=".85"/>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="product-top"><h3>Колумбия Уила</h3><span class="price">1 020 ₽</span></div>
+            <p class="meta">Кофе · средняя обжарка · 250 г</p>
+            <button class="add" data-add data-id="huila">
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.3"/></svg>
+              В корзину
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section journal-section" id="journal">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Журнал</p>
+          <h2>Три статьи<br>о внимании</h2>
+        </div>
+        <p class="section-note">Пишем о воде, температуре и свежести — без мистики и «энергий». Новый выпуск раз в две недели.</p>
+      </div>
+
+      <div class="journal-grid">
+        <a class="journal-card journal-featured reveal" href="#journal" data-article="water">
+          <div class="art">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Стакан воды с минералами">
+              <rect width="640" height="400" fill="#DDE3D6"/>
+              <circle cx="516" cy="104" r="72" fill="none" stroke="#1E3A2B" stroke-opacity=".16"/>
+              <path d="M92 342h456" stroke="#1E3A2B" stroke-opacity=".2"/>
+              <path d="M236 96h150l-14 196a30 30 0 0 1-30 28h-62a30 30 0 0 1-30-28z" fill="#F2F1E8" stroke="#1E3A2B" stroke-width="2"/>
+              <ellipse cx="311" cy="96" rx="75" ry="8" fill="none" stroke="#1E3A2B" stroke-width="2"/>
+              <path d="M248 210c30 10 78 10 128 0l-7 82a30 30 0 0 1-30 28h-62a30 30 0 0 1-30-28z" fill="#B2792F" opacity=".22"/>
+              <path d="M240 208c34 12 96 12 142 0" fill="none" stroke="#1E3A2B" stroke-opacity=".35"/>
+              <path d="M262 244c22 8 60 8 100 0M276 276c20 6 48 6 74 0" fill="none" stroke="#1E3A2B" stroke-opacity=".18"/>
+              <g fill="#B2792F" opacity=".75">
+                <circle cx="300" cy="286" r="4"/><circle cx="352" cy="266" r="3"/>
+                <circle cx="322" cy="302" r="3"/><circle cx="364" cy="294" r="4"/><circle cx="286" cy="262" r="2.6"/>
+              </g>
+              <path d="M332 198c14-10 30-8 38 6-14 10-30 8-38-6z" fill="#2A4A37" opacity=".9"/>
+              <path d="M334 200c10 0 20 2 30 6" fill="none" stroke="#DDE3D6" stroke-width="1.4"/>
+              <path d="M196 122v198" stroke="#1E3A2B" stroke-opacity=".4" stroke-dasharray="3 6"/>
+              <path d="M190 122h12M190 320h12" stroke="#1E3A2B" stroke-opacity=".4"/>
+              <text x="168" y="232" fill="#1E3A2B" fill-opacity=".6" font-family="Onest, sans-serif" font-size="10" letter-spacing="1" transform="rotate(-90 168 232)">50–150 мг/л</text>
+            </svg>
+          </div>
+          <div class="journal-body">
+            <div class="journal-meta"><span>Вода</span><span>7 минут</span></div>
+            <h3>Вода важнее чайника</h3>
+            <p>В чашке чая девяносто девять процентов воды. Если она жёсткая или пахнет хлором, никакой лист этого не исправит.</p>
+            <span class="journal-more">Читать статью →</span>
+          </div>
+        </a>
+
+        <div class="journal-side">
+          <a class="journal-row reveal" href="#journal" data-article="oolong">
+            <div class="art">
+              <svg viewBox="0 0 260 220" role="img" aria-label="Гайвань и чайные листья">
+                <rect width="260" height="220" fill="#E6DCC8"/>
+                <circle cx="34" cy="34" r="52" fill="none" stroke="#1E3A2B" stroke-opacity=".14"/>
+                <ellipse cx="134" cy="176" rx="62" ry="10" fill="#F2F1E8" stroke="#1E3A2B" stroke-width="1.6"/>
+                <path d="M92 112h84c0 28-20 48-42 48s-42-20-42-48z" fill="#F2F1E8" stroke="#1E3A2B" stroke-width="1.6"/>
+                <ellipse cx="134" cy="112" rx="42" ry="7" fill="#F2F1E8" stroke="#1E3A2B" stroke-width="1.6"/>
+                <path d="M104 102c7-14 20-22 30-22s23 8 30 22z" fill="#F2F1E8" stroke="#1E3A2B" stroke-width="1.6"/>
+                <circle cx="134" cy="76" r="4" fill="#B2792F"/>
+                <path d="M120 58c-5-8 4-12 0-20M148 58c5-8-4-12 0-20" fill="none" stroke="#1E3A2B" stroke-opacity=".3" stroke-dasharray="3 5"/>
+                <path d="M190 168c-12-4-16-16-10-26 12 2 18 12 10 26z" fill="#2A4A37" opacity=".85"/>
+                <path d="M198 182c14-2 20-12 18-24-12 0-20 8-18 24z" fill="#2A4A37" opacity=".6"/>
+              </svg>
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta"><span>Чай</span><span>6 минут</span></div>
+              <h3>Почему улун горчит</h3>
+              <p>Горечь — почти всегда не свойство листа, а ошибка заваривания. Четыре причины и что с ними делать.</p>
+            </div>
+          </a>
+
+          <a class="journal-row reveal" href="#journal" data-article="coffee">
+            <div class="art">
+              <svg viewBox="0 0 260 220" role="img" aria-label="Кофейная ветка и чашка">
+                <rect width="260" height="220" fill="#E5D5C9"/>
+                <path d="M20 190c50-38 96-78 140-124" fill="none" stroke="#2A211B" stroke-width="2.4"/>
+                <path d="M78 150c-18-16-18-38 2-50 12 18 10 36-2 50z" fill="#2A4A37" opacity=".85"/>
+                <circle cx="128" cy="116" r="15" fill="#9C4F33"/>
+                <path d="M121 111c4-3 9-3 13 0" fill="none" stroke="#E5D5C9" stroke-width="1.6"/>
+                <circle cx="158" cy="88" r="12" fill="#9C4F33"/>
+                <path d="M152 84c3-3 7-3 10 0" fill="none" stroke="#E5D5C9" stroke-width="1.4"/>
+                <circle cx="98" cy="146" r="10" fill="#9C4F33" opacity=".8"/>
+                <path d="M172 168h56l-6 28a13 13 0 0 1-13 11h-18a13 13 0 0 1-13-11z" fill="#F2F1E8" stroke="#2A211B" stroke-width="1.6"/>
+                <path d="M228 178c14-3 21 6 17 16-3 8-11 11-19 8" fill="none" stroke="#2A211B" stroke-width="1.6"/>
+                <ellipse cx="200" cy="168" rx="28" ry="5" fill="#F2F1E8" stroke="#2A211B" stroke-width="1.6"/>
+                <path d="M192 152c-4-7 4-11 0-18M208 152c4-7-4-11 0-18" fill="none" stroke="#2A211B" stroke-opacity=".3" stroke-dasharray="3 5"/>
+              </svg>
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta"><span>Кофе</span><span>8 минут</span></div>
+              <h3>Кофе, который пережил дорогу</h3>
+              <p>Свежеобжаренный кофе первые дни пахнет лучше, чем варится. Про дегазацию и терпение.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-quote reveal">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote>Мы не продаём «лучший чай в мире». Мы продаём чай, который вам понравится — и объясняем, почему.</blockquote>
+        <p class="quote-author">Мария и Пётр, основатели «Листа»</p>
+      </div>
+      <div class="about-body">
+        <p class="eyebrow reveal">О лавке</p>
+        <h2 class="reveal">Небольшое место<br>с большим чайником</h2>
+        <p class="reveal">Лавка открылась в 2018 году на Покровке: два стола, полка с банками и один чайник. Сейчас сортов больше, но принцип тот же — пробуем всё, что продаём, и не берём то, что не стали бы пить сами.</p>
+        <p class="reveal">Кофе обжариваем малыми партиями по вторникам. Чай заказываем у трёх хозяйств в Фуцзяне и Юньнане, иногда — у небольших ферм в Грузии и Краснодарском крае.</p>
+        <dl class="about-info reveal" id="delivery">
+          <div><dt>Адрес</dt><dd>Москва, ул. Покровка, 17</dd></div>
+          <div><dt>Часы</dt><dd>Ежедневно, 10:00–21:00</dd></div>
+          <div><dt>Дегустации</dt><dd>Суббота, 12:00 — бесплатно, 8 мест</dd></div>
+          <div><dt>Доставка</dt><dd>СДЭК по России, 2–5 дней. По Москве — курьером</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="contacts">
+    <div class="wrap newsletter-grid reveal">
+      <div>
+        <p class="eyebrow eyebrow-light">Письмо по пятницам</p>
+        <h2>Что заварить<br>на выходных</h2>
+        <p>Одна короткая рекомендация, один рецепт и ссылка на новую статью. Без акций и «горящих скидок».</p>
+      </div>
+      <form class="subscribe" id="subscribeForm" novalidate>
+        <label for="email">Ваш email</label>
+        <div class="subscribe-row">
+          <input type="email" id="email" name="email" placeholder="anna@example.ru" autocomplete="email" required>
+          <button class="btn btn-amber" type="submit">Подписаться</button>
+        </div>
+        <p class="form-note" id="formNote">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="#top">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor"/>
+          <path d="M12 28c0-9 6-15 16-16-1 10-7 16-16 16z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M12.5 27.5c4-6 8-9 12-11" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="logo-text">Лист<span class="logo-sub">чай · кофе · журнал</span></span>
+      </a>
+      <p>Лавка и журнал<br>о чае и кофе.<br>Москва, Покровка, 17.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Полка</h4>
+      <a href="#shelf">Чай</a>
+      <a href="#shelf">Кофе</a>
+      <a href="#shelf">Наборы</a>
+      <a href="#shelf">Подарки</a>
+    </div>
+    <div class="footer-col">
+      <h4>Журнал</h4>
+      <a href="#journal">Все статьи</a>
+      <a href="#journal">О воде</a>
+      <a href="#journal">О заваривании</a>
+      <a href="#journal">О кофе</a>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <a href="tel:+74951207790">+7 495 120-77-90</a>
+      <a href="mailto:hello@list-tea.ru">hello@list-tea.ru</a>
+      <p>Покровка, 17<br>ежедневно 10:00–21:00</p>
+      <div class="socials">
+        <a href="#">Telegram</a>
+        <a href="#">VK</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Лавка «Лист»</span>
+    <span>ИП Лебедева М. А. · ОГРНИП 318774612300015</span>
+    <a href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart" id="cart" aria-label="Корзина" aria-hidden="true">
+  <div class="cart-head">
+    <h2>Корзина</h2>
+    <button class="cart-close" id="cartClose" aria-label="Закрыть корзину">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="cart-body">
+    <p class="cart-empty" id="cartEmpty">Пока пусто. На <a href="#shelf">полке</a> четыре позиции — начните с чая.</p>
+    <div class="cart-items" id="cartItems"></div>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Итого</span><strong id="cartTotal">0 ₽</strong></div>
+    <p class="cart-note">Доставка от 300 ₽. От 3 000 ₽ — бесплатно по России.</p>
+    <button class="btn btn-primary cart-checkout" id="checkoutBtn" disabled>Оформить заказ</button>
+  </div>
+</aside>
+
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="readerTitle">
+  <div class="reader-bar">
+    <span class="reader-brand">ЛИСТ · журнал</span>
+    <button class="reader-close" id="readerClose">Закрыть
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="reader-scroll" id="readerScroll">
+    <div class="reader-inner" id="readerInner"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<template id="tpl-water">
+  <header class="reader-head">
+    <div class="reader-meta"><span>Вода</span><span>7 минут</span></div>
+    <h1 id="readerTitle">Вода важнее чайника</h1>
+    <p class="reader-lead">В чашке чая девяносто девять процентов воды. Если она жёсткая или пахнет хлором, никакой лист этого не исправит.</p>
+    <div class="reader-byline"><span>14 апреля 2026</span><span>Текст: Мария Лебедева</span></div>
+    <div class="reader-cover js-reader-cover"></div>
+  </header>
+  <div class="reader-body">
+    <p>Мы долго относились к воде как к чему-то само собой разумеющемуся: налил из чайника — и всё. Пока однажды не заварили один и тот же улун в трёх разных водах. В одной он был цветочным и долгим, во второй — плоским, в третьей — вяжущим, будто лист держали в кипятке вдвое дольше.</p>
+    <h2>Что вода делает с чаем</h2>
+    <p>Вкус и аромат чая — это сотни соединений, которые растворяются в воде. Минеральные соли помогают им выходить, но в избытке работают против: кальций и магний связывают ароматические вещества, и напиток становится «глухим». Слишком мягкая вода, наоборот, не вытягивает ничего — чай получается пустым и водянистым.</p>
+    <h2>Три цифры, на которые стоит смотреть</h2>
+    <p>Общая минерализация — от 50 до 150 мг/л. Жёсткость — 1–3 °Ж. Кислотность — ближе к нейтральной, pH 6,5–7,5. Эти параметры обычно указаны на бутылке или в отчёте водоканала; для фильтра — в инструкции к картриджу.</p>
+    <blockquote>Мягкая вода делает чай пустым, жёсткая — глухим. Вкус живёт в узком коридоре между ними.</blockquote>
+    <h2>Что делать дома</h2>
+    <p>Начните с фильтра: даже простой кувшин убирает хлор и часть солей. Наливайте свежую воду и не кипятите её дважды — при повторном нагреве вкус становится плоским. Дальше — температура: зелёный чай любит 70–80 °C, улун 85–90, красный 90–95, кофе 92–96.</p>
+    <p>Если хочется разобраться глубже, купите бутилированную воду с известным составом и сравните с фильтрованной. Разница на одном и том же листе слышна почти всегда — и это лучший способ понять, что подходит именно вам.</p>
+    <p>В лавке мы завариваем на воде с минерализацией около 90 мг/л. Спросите у бариста — покажем бутылку и дадим попробовать разницу.</p>
+    <div class="reader-foot">
+      <p class="reader-foot-label">Чай из статьи</p>
+      <div class="reader-product">
+        <span>Те Гуань Инь · улун · 50 г</span>
+        <button class="btn btn-primary btn-sm" data-add data-id="tgy">В корзину — 890 ₽</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-oolong">
+  <header class="reader-head">
+    <div class="reader-meta"><span>Чай</span><span>6 минут</span></div>
+    <h1 id="readerTitle">Почему улун горчит</h1>
+    <p class="reader-lead">Горечь — почти всегда не свойство листа, а ошибка заваривания. Разбираем четыре причины и что с ними делать.</p>
+    <div class="reader-byline"><span>2 апреля 2026</span><span>Текст: Пётр Ким</span></div>
+    <div class="reader-cover js-reader-cover"></div>
+  </header>
+  <div class="reader-body">
+    <p>Улун — самый капризный из чаёв. Его лист скручен в плотные шарики, которые раскрываются постепенно, и стоит чуть перегреть воду — вместо цветов и сливок в чашке появляется горечь.</p>
+    <h2>Причина первая: кипяток</h2>
+    <p>Сто градусов хороши для плотно спрессованного пуэра, но не для улуна. Начните с 85–90 °C. Если чайник без термометра — вскипятите воду и дайте ей постоять две-три минуты.</p>
+    <h2>Причина вторая: слишком много листа</h2>
+    <p>На 150 мл хватает 5–6 граммов. Скрученный улун набухает в три-четыре раза, и если насыпать «на глаз» с горкой, концентрация вырастет вдвое. Отвешивайте на кухонных весах хотя бы первые несколько раз.</p>
+    <h2>Причина третья: долгий пролив</h2>
+    <p>Первый пролив — 20–30 секунд, каждый следующий добавляйте по пять-десять. Улун не любит настаиваться: лучше сделать шесть коротких проливов, чем два длинных.</p>
+    <h2>Причина четвёртая: холодная посуда</h2>
+    <p>Гайвань или чайник нужно обдать кипятком. В холодной посуде вода остывает на десять градусов, и вы снова получаете не тот настой.</p>
+    <blockquote>Если чай уже горчит, не выбрасывайте: добавьте горячей воды, сократите следующий пролив и снизьте температуру на пять градусов.</blockquote>
+    <p>И последнее: горечь бывает разной. У хорошего улуна она появляется к пятому-шестому проливу и быстро уходит в сладость. Резкая, царапающая горечь с первого пролива — почти всегда техника, а не лист.</p>
+    <div class="reader-foot">
+      <p class="reader-foot-label">Чай из статьи</p>
+      <div class="reader-product">
+        <span>Те Гуань Инь · улун · 50 г</span>
+        <button class="btn btn-primary btn-sm" data-add data-id="tgy">В корзину — 890 ₽</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-coffee">
+  <header class="reader-head">
+    <div class="reader-meta"><span>Кофе</span><span>8 минут</span></div>
+    <h1 id="readerTitle">Кофе, который пережил дорогу</h1>
+    <p class="reader-lead">Свежеобжаренный кофе первые дни пахнет лучше, чем варится. Рассказываем про дегазацию и почему пачке нужно отлежаться.</p>
+    <div class="reader-byline"><span>21 марта 2026</span><span>Текст: Илья Сорокин</span></div>
+    <div class="reader-cover js-reader-cover"></div>
+  </header>
+  <div class="reader-body">
+    <p>После обжарки зерно продолжает жить: внутри идёт реакция, выделяется углекислый газ. Если смолоть зерно сразу, газ выходит в воду и мешает экстракции — вкус получается резким, с металлическим послевкусием.</p>
+    <h2>Сколько ждать</h2>
+    <p>Для фильтра — 7–10 дней после обжара. Для эспрессо — 5–7: там давление и короткий контакт, и слишком свежее зерно ведёт себя непредсказуемо. На пачке мы всегда ставим дату обжара, а не только «годен до».</p>
+    <h2>Клапан помогает, но не всё решает</h2>
+    <p>Односторонний клапан выпускает газ и не пускает кислород. Но если пачка открыта, окисление идёт быстрее. Пересыпайте зерно в герметичную банку, храните в тёмном месте при комнатной температуре и не убирайте в холодильник: конденсат убивает аромат быстрее воздуха.</p>
+    <h2>Почему вчера было слаще</h2>
+    <p>Три причины: зерно продолжало отдавать газ, помол был свежим, а вода — стабильной. Проверьте по очереди дату обжара, дату помола и рецепт. Чаще всего дело в помоле — он окисляется за минуты.</p>
+    <blockquote>Кофе — это продукт с коротким окном вкуса. Покупайте на месяц, а не на год.</blockquote>
+    <h2>Как читать дату</h2>
+    <p>Хорошая обжарка живёт 4–6 недель. Если на пачке только «годен до» через год — перед вами, скорее всего, зерно, которое обжарили давно. Спрашивайте дату обжара: это нормальный вопрос, а не придирка.</p>
+    <p>Мы обжариваем по вторникам и отдаём заказы в среду. Поэтому в лавке всегда можно взять зерно, которому 2–5 дней, — и оно будет готово к пятнице.</p>
+    <div class="reader-foot">
+      <p class="reader-foot-label">Кофе из статьи</p>
+      <div class="reader-product">
+        <span>Эфиопия Гуджи · светлая обжарка · 250 г</span>
+        <button class="btn btn-primary btn-sm" data-add data-id="guji">В корзину — 1 150 ₽</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
